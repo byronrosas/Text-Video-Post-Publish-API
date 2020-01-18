@@ -1,0 +1,24 @@
+type Post {
+  _id: ID
+  title: String
+  url: String     
+  description: String
+}
+type CountCollection{
+  count:Int
+}
+input PostInputs {
+  title: String
+  url:String
+  description: String
+}
+
+type Query {
+  
+  postList: [Post]  
+  postById(id: String!): Post
+}
+
+type Mutation {
+  postAdd(post:PostInputs!): CountCollection! 
+}
