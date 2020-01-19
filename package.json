@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "API text-video-post",
   "main": "server.js",
+  "engines":{
+    "node":"12.14.0",
+    "npm":"6.13.6"
+  },
   "scripts": {
     "start":"node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
