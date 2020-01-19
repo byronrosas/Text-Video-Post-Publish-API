@@ -19,7 +19,7 @@ const corsOptions = {
 
 //MIDDLEWARES
 app.use(bodyParser.json()) // for parsing application/json
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(helmet.frameguard({ action: 'sameorigin' }))
 
 runAPI(app);
