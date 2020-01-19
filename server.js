@@ -13,7 +13,7 @@ const port = process.env.PORT || 3001;
 
 
 const corsOptions = {
-  origin: 'https://text-videoblog.herokuapp.com',
+  origin: true,
   credentials: true
 }
 

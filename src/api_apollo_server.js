@@ -31,7 +31,7 @@ function runAPI(app) {
   const enableCors = (process.env.ENABLE_CORS || 'true') === 'true';
   console.log('CORS setting:', enableCors);
   // middleware apollo
-  server.applyMiddleware({ app, path: '/graphql', cors: enableCors });
+  server.applyMiddleware({ app, path: 'https://text-video-graph.herokuapp.com/graphql', cors: enableCors });
 }
 
 module.exports = { runAPI };
