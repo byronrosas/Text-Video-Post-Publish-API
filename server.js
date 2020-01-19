@@ -11,6 +11,12 @@ const app = express();
 
 const port = process.env.PORT || 3001;
 
+
+const corsOptions = {
+  origin: 'https://text-videoblog.herokuapp.com',
+  credentials: true
+}
+
 //MIDDLEWARES
 app.use(bodyParser.json()) // for parsing application/json
 app.use(cors());
