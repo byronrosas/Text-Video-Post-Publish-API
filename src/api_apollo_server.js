@@ -27,10 +27,14 @@ const server = new ApolloServer({
 });
 
 function runAPI(app) {
+  const corsOptions = {
+    origin: 'https://text-videoblog.herokuapp.com',
+    credentials: true
+  }
   const enableCors = (process.env.ENABLE_CORS || 'true') === 'true';
   console.log('CORS setting:', enableCors);
   // middleware apollo
-  server.applyMiddleware({ app, path: '/graphql', cors: enableCors });
+  server.applyMiddleware({ app, path: '/graphql', cors: corsOptions });
 }
 
 module.exports = { runAPI };
