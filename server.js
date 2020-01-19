@@ -10,10 +10,10 @@ const express = require('express');
 const app = express();
 
 const port = process.env.PORT || 3001;
-
+const FRONTEND_URL = process.env.FRONTEND_URL | "http://localhost:3000";
 
 const corsOptions = {
-  origin: true,
+  origin: FRONTEND_URL,
   credentials: true
 }
 
