@@ -9,7 +9,7 @@ const helmet = require('helmet')
 const express = require('express');
 const app = express();
 
-const port = process.env.API_SERVER_PORT || 3001;
+const port = process.env.PORT || 3001;
 
 //MIDDLEWARES
 app.use(bodyParser.json()) // for parsing application/json
