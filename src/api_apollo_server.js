@@ -23,7 +23,9 @@ const server = new ApolloServer({
   formatError: (error) => {
     console.log('Error', error);
     return error;
-  },
+  },  
+  playground: true,  
+  introspection: true, 
 });
 
 function runAPI(app) {
