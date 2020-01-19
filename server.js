@@ -11,9 +11,15 @@ const app = express();
 
 const port = process.env.PORT || 3001;
 const FRONTEND_URL = process.env.FRONTEND_URL | "http://localhost:3000";
-
+var whitelist = [FRONTEND_URL]
 const corsOptions = {
-  origin: FRONTEND_URL,
+  origin:  function (origin, callback) {
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  },
   credentials: true
 }
 
